@@ -11,9 +11,9 @@ interface Props {
 
 function DestinationComponent({ currentDestination, handleClick }: Props) {
     const destination = data.destinations.find(destination => destination.name === currentDestination)
-    const changeDestination = (destination: string) => {
-        // console.log(destination);
-    }
+    // const changeDestination = (destination: string) => {
+    //     // console.log(destination);
+    // }
     return (
         <div className='flex justify-between items-center w-full h-auto pl-24 pr-16 mt-10'>
             <div className=''>
