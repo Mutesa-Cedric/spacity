@@ -11,12 +11,9 @@ function Navbar({ currentPage }: Props) {
         return (
             <div className='navbar  ml-14 w-full h-24 absolute right-0 top-10 z-10'>
                 <nav className='flex items-center justify-between h-full w-full pl-20'>
-                    <Roll duration={10000}>
                         <div className='mr-12 '>
                             <Image src={'/assets/shared/logo.svg'} width={80} height={80} />
                         </div>
-                    </Roll>
-
                     <div className='border-b-[1px] relative left-8 z-20 border-white w-full opacity-25'>
 
                     </div>
