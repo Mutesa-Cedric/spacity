@@ -3,29 +3,90 @@
 @tailwind utilities;
 
 /* font families */
-
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Bellefair&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 /* font families */
 
-@layer base{
-    nav{
-        font-family: 'Barlow Condensed', sans-serif;
-        color:white;
+@layer base {
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
     }
-    nav .navNumber{
+    nav {
+        /* font-family: 'Barlow-Condensed', sans-serif; */
+        color: white;
+    }
+
+    nav ul li {
+        @apply ml-12 flex items-center justify-between cursor-pointer py-9 transition ease-linear duration-500;
+    }
+
+    nav ul li:hover {
+        @apply border-b-[3px] py-9 border-gray-300;
+    }
+
+    nav ul li.active {
+        @apply border-b-[3px] py-9;
+    }
+
+    nav ul li.active .navText {
+        @apply font-normal;
+    }
+
+    nav ul li .navText {
+        /* font-family: 'lato',sans-serif; */
+        font-style: normal;
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        text-transform: uppercase;
 
     }
 
-    nav .navText{
-
+    nav ul li .navNumber {
+        /* font-family: 'lato',sans-serif; */
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        margin-right: 6px;
     }
-    nav ul li{
-
-    }
-    
 }
 
-@layer components{
-    
+@layer components {
+
+    #space-text {
+        /* font-family: 'Bellefair', sans-serif; */
+        /* font-style: normal; */
+        font-weight: 400;
+        font-size: 150px;
+        line-height: 172px;
+        color: #FFFFFF;
+        margin-top: 16px;
+        margin-bottom: 32px;
+
+    }
+
+    #home-desc {
+        /* font-family: 'lato',sans-serif; */
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        color: #D0D6F9;
+        width: 51%;
+    }
+
+    #explore-text {
+        /* font-family: '',sans-serif; */
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 37px;
+        /* identical to box height */
+        letter-spacing: 2px;
+        color: #0B0D17;
+    }
 }
