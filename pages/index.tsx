@@ -3,8 +3,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/navbar'
 import Fade from 'react-reveal/Fade';
+import { useRouter } from 'next/router';
 
 const Home: NextPage = () => {
+  let navigate=useRouter()
   return (
     <div className="overflow-hidden">
       <Head>
@@ -24,11 +26,10 @@ const Home: NextPage = () => {
             </Fade>
           </div>
           <Fade bottom duration={3000} >
-            <div className=' cursor-pointer transition duration-200 ease-out hover:scale-150 h-[48%] mb-4 self-end w-[32%] flex items-center justify-center rounded-[50%] bg-white'>
+            <div onClick={()=>{navigate.push('/destination')}} className=' cursor-pointer h-[48%] mb-4 self-end w-[32%] flex items-center justify-center rounded-[50%] bg-white'>
               <span id='explore-text'> EXPLORE</span>
             </div>
           </Fade>
-
         </div>
       </main>
     </div>

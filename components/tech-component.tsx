@@ -2,7 +2,7 @@ import React from 'react'
 import TechNav from './tech-nav';
 import data from "../data.json"
 import Image from 'next/image';
-
+import Fade from 'react-reveal/Fade'
 interface Props {
     currentTech: string;
     updateTech: (tech: string) => void;
@@ -20,9 +20,11 @@ function TechComponent({ currentTech, updateTech }: Props) {
                     <p className='text-[#D0D6F9] leading-8 text-[18px] font-light tracking-[1px] w-3/5'>{tech?.description}</p>
                 </div>
             </div>
-            <div className='w-full'>
-                <Image src={tech!.images.portrait} width={550} height={550} />
-            </div>
+            <Fade bottom duration={3000}>
+                <div className='w-full'>
+                    <Image src={tech!.images.portrait} width={550} height={550} />
+                </div>
+            </Fade>
         </div>
     )
 }

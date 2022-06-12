@@ -1,9 +1,9 @@
 import React from 'react'
 import data from "../data.json"
-
 import Image from "next/image"
 import { Destination } from '../typings'
 import DestNav from './dest-nav'
+import Fade from 'react-reveal/Fade'
 interface Props {
     currentDestination: string;
     handleClick: (destination: string) => void;
@@ -16,9 +16,12 @@ function DestinationComponent({ currentDestination, handleClick }: Props) {
     // }
     return (
         <div className='flex justify-between items-center w-full h-auto pl-24 pr-16 mt-10'>
-            <div className=''>
-                <Image src={destination!.images.png} width={400} height={400} />
-            </div>
+            <Fade left >
+                <div className=''>
+                    <Image src={destination!.images.png} width={400} height={400} />
+                </div>
+            </Fade>
+
             <div className='flex flex-col justify-between w-2/5'>
                 <DestNav handleClick={handleClick} currentDestination={currentDestination} />
                 <div className='text-white text-[100px] leading-[115px] font-normal my-4'>

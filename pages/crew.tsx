@@ -15,7 +15,7 @@ function Crew() {
   }
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Head>
         <title>Spacity - Crew</title>
         <link rel="icon" href="/assets/shared/logo.svg" />

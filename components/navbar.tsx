@@ -49,7 +49,7 @@ function Navbar({ currentPage }: Props) {
         )
     }
     return (
-        <Fade duration={5000}>
+        <Fade duration={3000}>
             <div className='navbar  ml-14 w-full h-24 absolute right-0 top-10 z-10'>
                 <nav className='flex items-center justify-between h-full w-full pl-20'>
                     <Roll duration={10000}>

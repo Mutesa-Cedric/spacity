@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Fade from 'react-reveal/Fade'
 interface Props {
     currentTech: string;
     updateTech: (tech: string) => void;
@@ -7,6 +7,7 @@ interface Props {
 function TechNav({ currentTech, updateTech }: Props) {
     return (
         <div className='flex flex-col justify-between mr-24'>
+            <Fade duration={3000}>
             <div className='w-[80px]  text-[32px] leading-9 justify-center flex items-center h-[80px] rounded-[50%] cursor-pointer'
                 style={{
                     backgroundColor: `${currentTech === "Launch vehicle" ? "white" : "#11131D"}`,
@@ -32,6 +33,8 @@ function TechNav({ currentTech, updateTech }: Props) {
             }}
             onClick={updateTech.bind(null, "Space capsule")}
             >3</div>
+            </Fade>
+         
         </div>
     )
 }

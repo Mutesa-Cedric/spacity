@@ -13,7 +13,7 @@ function Technology() {
     // console.log("changing on destination click");
   }
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Head>
         <title>Spacity - Technology</title>
         <link rel="icon" href="/assets/shared/logo.svg" />

@@ -12,6 +12,9 @@
         padding:0;
         box-sizing:border-box;
     }
+    body{
+        background-color:#111;
+    }
     nav {
         /* font-family: 'Barlow-Condensed', sans-serif; */
         color: white;
